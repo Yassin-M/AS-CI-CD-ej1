@@ -1,0 +1,17 @@
+name: Ejercicio 1
+
+on: push
+
+jobs:
+  workflow1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v7
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Ejecutar test
+        run: pytest test.py
